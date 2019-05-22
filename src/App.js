@@ -1,22 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
+import one from './one.jpg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+        <img src={one} className="App-logo" alt="logo" />
+        <a>
+          点击下方蓝色按钮抢票
+        </a>
         <a
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          抢
         </a>
       </header>
     </div>
