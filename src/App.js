@@ -1,24 +1,25 @@
 import React from 'react';
-import one from './one.jpg';
 import './App.css';
+import Ahead from './head/Ahead';
+import Xiaoxi from "./cont/xiaoxi/xiaoxi";
+import Footer from "./foot/footer";
+import Carousel from "./cont/Carousel/carousel";
+import Purchase from "./cont/purchase/purchase";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={one} className="App-logo" alt="logo" />
-        <a>
-          点击下方蓝色按钮抢票
-        </a>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          抢
-        </a>
-      </header>
+        <Ahead></Ahead>
+        <div className="cont-box">
+          <div className="cont-one">
+                <Xiaoxi></Xiaoxi>
+              <div className="lunbo">
+                  <Carousel></Carousel>
+                  <Purchase></Purchase>
+              </div>
+          </div>
+        </div>
+      <Footer></Footer>
     </div>
   );
 }
