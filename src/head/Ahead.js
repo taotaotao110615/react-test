@@ -1,6 +1,7 @@
 import React from 'react';
 import './Ahead.css';
 import two from './two.jpg'
+import ModalExample from "./tank/tank";
 
 class Ahead extends React.Component{
     constructor(props){
@@ -17,7 +18,7 @@ class Ahead extends React.Component{
                         <img src={two} />
                     </div>
                     <div className="land">
-                        <p><span>登陆</span></p>
+                        <div><span className="spa"><ModalExample></ModalExample></span></div>
                         <p><span>注册</span></p>
                         <p><span>关于</span></p>
                     </div>
