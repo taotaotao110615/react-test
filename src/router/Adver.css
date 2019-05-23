@@ -1,0 +1,10 @@
+.adver-colorr{
+    padding: 4px 5px;
+    border: 1px solid #b1b2a6;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+.adver-colorr:nth-of-type(1){
+    background: green;
+    color: #fff;
+}

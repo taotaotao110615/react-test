@@ -1,6 +1,9 @@
 import React from 'react'
 import './Nvig.css'
 import Earth from './Earth'
+import Data from './Data'
+import Flow from './Flow'
+import Adver from './Adver'
 import earth from './earth.jpg'
 import data from './data.jpg'
 import flow from './flow.jpg'
@@ -43,7 +46,16 @@ class Nvig extends React.Component{
                     </div>
                 </div>
                 <div className='earth'>
-                   <Earth></Earth>
+                    <div style={{display:'none'}}>
+                        <Earth className='yyy'></Earth>
+                    </div>
+                    <div style={{display:'none'}}>
+                        <Data></Data>
+                    </div>
+                    <div style={{display:'none'}}>
+                        <Flow></Flow>
+                    </div>
+                    <Adver></Adver>
                 </div>
             </div>
         );

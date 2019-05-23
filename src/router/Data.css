@@ -1,0 +1,20 @@
+.censuss{
+    margin-right: 10px;
+}
+.colorr{
+    padding: 2px 8px;
+    border: 1px solid #b1b2a6;
+}
+.data-color{
+    padding: 4px 5px;
+    border: 1px solid #b1b2a6;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+.data-color:nth-of-type(1){
+    background: green;
+    color: #fff;
+}
+.sizee{
+    font-size: 13px;
+}
