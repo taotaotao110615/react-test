@@ -1,0 +1,17 @@
+.cont-box{
+  width: 987px;
+  margin: auto;
+}
+body{
+
+}
+.cont-one{
+  display: flex;
+  margin-top: 20px;
+}
+.App{
+  background-color: #f2f2f2;
+}
+.lunbo{
+  margin-left: auto;
+}

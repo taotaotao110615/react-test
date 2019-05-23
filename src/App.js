@@ -1,10 +1,25 @@
 import React from 'react';
 import './App.css';
-import Nvig from './router/Nvig'
+import Ahead from './head/Ahead';
+import Xiaoxi from "./cont/xiaoxi/xiaoxi";
+import Footer from "./foot/footer";
+import Carousel from "./cont/Carousel/carousel";
+import Purchase from "./cont/purchase/purchase";
+
 function App() {
   return (
     <div className="App">
-      <Nvig/>
+        <Ahead></Ahead>
+        <div className="cont-box">
+          <div className="cont-one">
+                <Xiaoxi></Xiaoxi>
+              <div className="lunbo">
+                  <Carousel></Carousel>
+                  <Purchase></Purchase>
+              </div>
+          </div>
+        </div>
+      <Footer></Footer>
     </div>
   );
 }
