@@ -4,6 +4,8 @@ import fi from './fi.jpg';
 import fr from './fr.jpg';
 import si from './si.jpg';
 import xie from './xie.jpg'
+import { BrowserRouter,Route,Switch,Redirect,Link } from 'react-router-dom'
+import Nvig from '../../router/Nvig'
 
 class Purchase extends React.Component{
     constructor(props){
@@ -23,7 +25,9 @@ class Purchase extends React.Component{
                         <div className="purchase-cont-wenzi">
                             <p className="purchase-cont-wenzi-pone">咖啡好喝</p>
                             <p className="purchase-cont-wenzi-two">是发哦发货发哈哈</p>
+                            <Link to='/nvig?0'>
                             <p className="purchase-cont-wenzi-psan">立即购买</p>
+                            </Link>
                         </div>
                     </div>
                     <div className="purchase-cont-one">
@@ -33,7 +37,9 @@ class Purchase extends React.Component{
                         <div className="purchase-cont-wenzi">
                             <p className="purchase-cont-wenzi-pone">咖啡好喝</p>
                             <p className="purchase-cont-wenzi-two">是发哦发货发哈哈</p>
-                            <p className="purchase-cont-wenzi-psan">立即购买</p>
+                            <Link to='/nvig?1'>
+                                <p className="purchase-cont-wenzi-psan">立即购买</p>
+                            </Link>
                         </div>
                     </div>
                     <div className="purchase-cont-one">
@@ -43,7 +49,9 @@ class Purchase extends React.Component{
                         <div className="purchase-cont-wenzi">
                             <p className="purchase-cont-wenzi-pone">咖啡好喝</p>
                             <p className="purchase-cont-wenzi-two">是发哦发货发哈哈</p>
-                            <p className="purchase-cont-wenzi-psan">立即购买</p>
+                            <Link to='/nvig?2'>
+                                <p className="purchase-cont-wenzi-psan">立即购买</p>
+                            </Link>
                         </div>
                     </div>
                     <div className="purchase-cont-one">
@@ -53,7 +61,9 @@ class Purchase extends React.Component{
                         <div className="purchase-cont-wenzi">
                             <p className="purchase-cont-wenzi-pone">咖啡好喝</p>
                             <p className="purchase-cont-wenzi-two">是发哦发货发哈哈</p>
-                            <p className="purchase-cont-wenzi-psan">立即购买</p>
+                            <Link to='/nvig?3'>
+                                <p className="purchase-cont-wenzi-psan">立即购买</p>
+                            </Link>
                         </div>
                     </div>
                 </div>

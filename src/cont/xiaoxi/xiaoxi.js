@@ -11,7 +11,7 @@ class Xiaoxi extends React.Component{
     render() {
         return(
             <div className="xiaoxin-box">
-                <div className="product">
+                <div className="product-bb">
                     <div className="product-tit">
                         <p>全部产品</p>
                     </div>

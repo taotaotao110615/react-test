@@ -1,0 +1,67 @@
+.earth-top{
+    width: 980px;
+    overflow: hidden;
+}
+.earth-fex{
+   padding: 21px 0 0 19px;
+    background:white;
+    margin-bottom: 20px;
+}
+/*统计*/
+.census{
+    margin-top: 30px;
+    color: #b1b2a6;
+    margin-bottom: 20px;
+}
+/*产品*/
+.product{
+    display: flex;
+    margin-top: 20px;
+}
+.colors{
+    padding: 4px 0;
+}
+.color{
+    padding: 4px 5px;
+    border: 1px solid #b1b2a6;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+.color:nth-of-type(1){
+    background: green;
+    color: #fff;
+}
+/*间隙*/
+.gap{
+    margin-left: 40px;
+    display: flex;
+}
+/*立即购买*/
+.shop{
+    padding: 6px 14px;
+    background: green;
+    margin-left: 118px;
+    border-radius: 6px;
+    color: white;
+    margin-bottom: 20px;
+}
+/*产品说明*/
+.explain{
+    font-size: 17px;
+    margin-bottom: 24px;
+}
+.analysis{
+    display: flex;
+}
+.analysis-as{
+    list-style: none;
+    padding: 10px 36px;
+    border-bottom: 1px solid #b1b2a6;
+    border-right: 1px solid #b1b2a6;
+}
+.borderr{
+    width: 928px;
+    margin-top: 21px;
+    border-top: 1px solid #b1b2a6;
+    border-left: 1px solid #b1b2a6;
+}

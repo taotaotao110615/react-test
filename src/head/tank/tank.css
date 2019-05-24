@@ -1,0 +1,33 @@
+input{
+    height: 27px;
+    outline: none;
+    border: #4fc08d;
+    font-size: 18px;
+}
+.acount:first-child{
+    margin-top: 20px;
+}
+.acount{
+    display: flex;
+    text-align: center;
+}
+.acount>div{
+    font-size: 18px;
+    color: #4fc08d;
+    margin-left: 5px;
+}
+.acount-box{
+    width: 250px;
+    margin: auto;
+}
+.yc{
+    height: 30px;
+    color: red;
+    margin-left: 50px;
+}
+.gerenxinxi{
+    position: absolute;
+    top: -35px;
+    left: -20px;
+    width: 170px;
+}
