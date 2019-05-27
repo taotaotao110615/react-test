@@ -5,7 +5,11 @@ class Flow extends React.Component{
     constructor(props){
         super(props)
         this.state={
-            num:1
+            num:1,
+            area:'入门版',
+            time:'半年',
+            ben:'客户版',
+            numm:29
         }
     }
     adds(){
@@ -30,6 +34,9 @@ class Flow extends React.Component{
         }
         flowColor[e].style.background='green'
         flowColor[e].style.color='#fff'
+        this.setState({
+            time:flowColor[e].innerText
+        })
     }
     adde(e){
         let flowColorr=document.getElementsByClassName('flow-colorr')
@@ -39,6 +46,21 @@ class Flow extends React.Component{
         }
         flowColorr[e].style.background='green'
         flowColorr[e].style.color='#fff'
+        this.setState({
+            ben:flowColorr[e].innerText
+        })
+    }
+    confimm(){
+        let start=document.getElementsByClassName('flow-start')[0]
+        let cartwo=document.getElementsByClassName('cartwo')[0]
+        start.style.display='block'
+        this.setState({
+            area:cartwo.value
+        })
+    }
+    confimmm(){
+        let start=document.getElementsByClassName('flow-start')[0]
+        start.style.display='none'
     }
     render(){
         return(
@@ -58,7 +80,7 @@ class Flow extends React.Component{
                     <div className='product'>
                         <p className='colors'>产品类型：</p>
                         <div className='gap'>
-                            <select name="cars">
+                            <select name="cars" className='cartwo'>
                                 <option value="入门版">入门版</option>
                                 <option value="豪华版">豪华版</option>
                                 <option value="精装版">精装版</option>
@@ -92,7 +114,7 @@ class Flow extends React.Component{
                     </div>
                     {/*总价*/}
                     <div className='product'>
-                        <p className='shop'>立即购买</p>
+                        <p className='shop' onClick={()=>this.confimm()}>立即购买</p>
                     </div>
                     {/*立即购买*/}
                 </div>
@@ -116,6 +138,43 @@ class Flow extends React.Component{
                     <p>访问者电脑分辨率显示模式</p>
                     <p>用户所使用的操作系统和版本</p>
                     <p>用户所在地理分布情况</p>
+                </div>
+                <div className='flow-start'>
+                    <div className='flow-mask'>
+                        <div className='flow-cent'>
+                            <div className='flow-num'>
+                                <div className='flow-ceten'>
+                                    <ul className='flow-ul'>
+                                        <li className='flow-sixe sixe'>购买数量</li>
+                                        <li className='flow-sixe sixe'>产品类型</li>
+                                        <li className='flow-sixe sixe'>有效时间</li>
+                                        <li className='flow-sixe sixe'>产品版本</li>
+                                        <li className='flow-sixe sixe'>总价</li>
+                                    </ul>
+                                    <ul className='flow-ul ull'>
+                                        <li className='flow-sixe lii'>{this.state.num}</li>
+                                        <li className='flow-sixe lii'>{this.state.area}</li>
+                                        <li className='flow-sixe lii'>{this.state.time}</li>
+                                        <li className='flow-sixe lii'>{this.state.ben}</li>
+                                        <li className='flow-sixe lii'>{this.state.numm}</li>
+                                    </ul>
+                                </div>
+                                <div className='x' onClick={()=>this.confimmm()}>
+                                    X
+                                </div>
+                                <div className='bank'>
+                                    <h3>请选择银行</h3>
+                                    <div className='logoo'>
+                                        <div className='logoe'></div>
+                                        <div className='logoe'></div>
+                                        <div className='logoe'></div>
+                                        <div className='logoe'></div>
+                                    </div>
+                                </div>
+                                <div className='confirm'>确认购买</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         )

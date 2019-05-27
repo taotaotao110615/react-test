@@ -2,6 +2,15 @@ import React from 'react'
 import './Earth.css'
 
 class Earth extends React.Component{
+    constructor(props){
+        super(props)
+        this.state={
+            colorr:'红色版',
+            area:'北京',
+            time:'半年',
+            numm:500
+        }
+    }
     add(e){
         let color=document.getElementsByClassName('color')
         for (let i=0;i<color.length;i++){
@@ -10,6 +19,21 @@ class Earth extends React.Component{
         }
         color[e].style.background='green'
         color[e].style.color='#fff'
+        this.setState({
+            colorr:color[e].innerText
+        })
+    }
+    confimm(){
+        let start=document.getElementsByClassName('earth-start')[0]
+        let carone=document.getElementsByClassName('carone')[0]
+        start.style.display='block'
+        this.setState({
+            area:carone.value
+        })
+    }
+    confimmm(){
+        let start=document.getElementsByClassName('earth-start')[0]
+        start.style.display='none'
     }
     render() {
         return (
@@ -29,7 +53,7 @@ class Earth extends React.Component{
                     <div className='product'>
                         <p className='colors'>适用地区：</p>
                         <div className='gap'>
-                            <select name="cars">
+                            <select name="cars" className="carone">
                                 <option value="北京">北京</option>
                                 <option value="上海">上海</option>
                                 <option value="深圳">深圳</option>
@@ -53,7 +77,7 @@ class Earth extends React.Component{
                     </div>
                     {/*总价*/}
                     <div className='product'>
-                       <p className='shop'>立即购买</p>
+                       <p className='shop' onClick={()=>this.confimm()}>立即购买</p>
                     </div>
                     {/*立即购买*/}
                 </div>
@@ -99,7 +123,41 @@ class Earth extends React.Component{
                             <li className='analysis-as'> 电脑硬件</li>
                         </ul>
                     </div>
-
+                </div>
+                <div className='earth-start'>
+                    <div className='earth-mask'>
+                        <div className='earth-cent'>
+                            <div className='earth-num'>
+                                <div className='earth-ceten'>
+                                <ul className='earth-ul'>
+                                    <li className='earth-sixe sixe'>产品类型</li>
+                                    <li className='earth-sixe sixe'>适用地区</li>
+                                    <li className='earth-sixe sixe'>有效时间</li>
+                                    <li className='earth-sixe sixe'>总价</li>
+                                </ul>
+                                <ul className='earth-ul ull'>
+                                    <li className='earth-sixe lii'>{this.state.colorr}</li>
+                                    <li className='earth-sixe lii'>{this.state.area}</li>
+                                    <li className='earth-sixe lii'>{this.state.time}</li>
+                                    <li className='earth-sixe lii'>{this.state.numm}</li>
+                                </ul>
+                                   </div>
+                                <div className='x' onClick={()=>this.confimmm()}>
+                                    X
+                                </div>
+                                <div className='bank'>
+                                    <h3>请选择银行</h3>
+                                    <div className='logoo'>
+                                        <div className='logoq'></div>
+                                        <div className='logoq'></div>
+                                        <div className='logoq'></div>
+                                        <div className='logoq'></div>
+                                    </div>
+                                </div>
+                                <div className='confirm'>确认购买</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         );

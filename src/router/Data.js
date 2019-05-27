@@ -5,7 +5,10 @@ class Data extends React.Component{
     constructor(props){
         super(props)
         this.state={
-            num:1
+            num:1,
+            area:'1',
+            time:'一年',
+            numm:500
         }
     }
     adds(){
@@ -30,6 +33,19 @@ class Data extends React.Component{
         }
         dataColor[e].style.background='green'
         dataColor[e].style.color='#fff'
+        this.setState({
+            area:dataColor[e].innerText
+        })
+
+    }
+    confimm(){
+        let start=document.getElementsByClassName('data-start')[0]
+        let carone=document.getElementsByClassName('carone')[0]
+        start.style.display='block'
+    }
+    confimmm(){
+        let start=document.getElementsByClassName('data-start')[0]
+        start.style.display='none'
     }
     render(){
         return(
@@ -71,7 +87,7 @@ class Data extends React.Component{
                     </div>
                     {/*总价*/}
                     <div className='product'>
-                        <p className='shop'>立即购买</p>
+                        <p className='shop' onClick={()=>this.confimm()}>立即购买</p>
                     </div>
                     {/*立即购买*/}
                 </div>
@@ -83,7 +99,41 @@ class Data extends React.Component{
                         但是，在需要依赖大数据进行个性化决策时，张冠李戴是个很大忌讳，精确性就变得非常重要。所以在效率和精确之间存在一个平衡点，
                         这是大数据预测中一个棘手问题。
                     </p>
-
+                </div>
+                <div className='data-start'>
+                    <div className='data-mask'>
+                        <div className='data-cent'>
+                            <div className='data-num'>
+                                <div className='data-ceten'>
+                                    <ul className='data-ul'>
+                                        <li className='data-sixe sixe'>购买数量</li>
+                                        <li className='data-sixe sixe'>媒介</li>
+                                        <li className='data-sixe sixe'>有效时间</li>
+                                        <li className='data-sixe sixe'>总价</li>
+                                    </ul>
+                                    <ul className='data-ul ull'>
+                                        <li className='data-sixe lii'>{this.state.num}</li>
+                                        <li className='data-sixe lii'>{this.state.area}</li>
+                                        <li className='data-sixe lii'>{this.state.time}</li>
+                                        <li className='data-sixe lii'>{this.state.numm}</li>
+                                    </ul>
+                                </div>
+                                <div className='x' onClick={()=>this.confimmm()}>
+                                    X
+                                </div>
+                                <div className='bank'>
+                                    <h3>请选择银行</h3>
+                                    <div className='logoo'>
+                                        <div className='logow'></div>
+                                        <div className='logow'></div>
+                                        <div className='logow'></div>
+                                        <div className='logow'></div>
+                                    </div>
+                                </div>
+                                <div className='confirm'>确认购买</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         )

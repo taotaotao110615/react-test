@@ -5,7 +5,11 @@ class Adver extends React.Component{
     constructor(props){
         super(props)
         this.state={
-            num:1
+            num:1,
+            area:'出版业',
+            ben:'初级版',
+            time:'半年',
+            numm:500
         }
     }
     adds(){
@@ -31,8 +35,22 @@ class Adver extends React.Component{
         }
         adverColor[e].style.background='green'
         adverColor[e].style.color='#fff'
+        this.setState({
+            ben: adverColor[e].innerText
+        })
     }
-
+    confimm(){
+        let start=document.getElementsByClassName('adver-start')[0]
+        let carthree=document.getElementsByClassName('carthree')[0]
+        start.style.display='block'
+        this.setState({
+            area:carthree.value
+        })
+    }
+    confimmm(){
+        let start=document.getElementsByClassName('adver-start')[0]
+        start.style.display='none'
+    }
 render(){
     return(
         <div className='earth-top'>
@@ -54,7 +72,7 @@ render(){
                 <div className='product'>
                     <p className='colors'>行业：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
                     <div className='gap'>
-                        <select name="cars">
+                        <select name="cars" className='carthree'>
                             <option value="出版业">出版业</option>
                             <option value="出版社">出版社</option>
                         </select>
@@ -87,7 +105,7 @@ render(){
                 </div>
                 {/*总价*/}
                 <div className='product'>
-                    <p className='shop'>立即购买</p>
+                    <p className='shop'  onClick={()=>this.confimm()}>立即购买</p>
                 </div>
                 {/*立即购买*/}
             </div>
@@ -138,6 +156,47 @@ render(){
                     </ul>
                 </div>
             </div>
+
+
+
+            <div className='adver-start'>
+                <div className='adver-mask'>
+                    <div className='adver-cent'>
+                        <div className='adver-num'>
+                            <div className='adver-ceten'>
+                                <ul className='adver-ul'>
+                                    <li className='adver-sixe sixe'>购买数量</li>
+                                    <li className='adver-sixe sixe'>行业</li>
+                                    <li className='adver-sixe sixe'>产品版本</li>
+                                    <li className='adver-sixe sixe'>有效时间</li>
+                                    <li className='adver-sixe sixe'>总价</li>
+                                </ul>
+                                <ul className='adver-ul ull'>
+                                    <li className='adver-sixe lii'>{this.state.num}</li>
+                                    <li className='adver-sixe lii'>{this.state.area}</li>
+                                    <li className='adver-sixe lii'>{this.state.time}</li>
+                                    <li className='adver-sixe lii'>{this.state.ben}</li>
+                                    <li className='adver-sixe lii'>{this.state.numm}</li>
+                                </ul>
+                            </div>
+                            <div className='x' onClick={()=>this.confimmm()}>
+                                X
+                            </div>
+                            <div className='bank'>
+                                <h3>请选择银行</h3>
+                                <div className='logoo'>
+                                    <div className='logos'></div>
+                                    <div className='logos'></div>
+                                    <div className='logos'></div>
+                                    <div className='logos'></div>
+                                </div>
+                            </div>
+                            <div className='confirm'>确认购买</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     )
 }
